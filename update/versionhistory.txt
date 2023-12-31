@@ -1,0 +1,98 @@
+1.0.0: Jan 2012: initial release
+
+1.0.1: Jan 2012: fixes Netatalk date-stamp bug (thanks to Steven Hirsch)
+
+1.0.2: Jan 2013: Netatalk 2.2.4; OS X 10.7+ login fixed; netboot fixes;
+                 Raspbian "Wheezy" support; Ubuntu 12.04 LTS support
+
+1.1.0: Apr 2013: Full GS/OS install; eliminated GS.SYSTEM volume;
+                 Raspberry Pi enhancements; lots of improvements to installer;
+                 more utilities installed for Apple II; improved cppo
+                 NOTE: fresh install required, can't update earlier version
+
+1.1.1: Jun 2013: Wi-Fi support; updates/additions to commands in a2server-help;
+                 bug fixes and improvements to install script; appletalk kernel
+                 module for Raspbian (instead of replacement kernel); RPi
+                 console (onboard serial) set to 19,200 bps during boot
+
+1.1.2: Oct 2013: resolves issue of no AppleTalk in Raspbian 2013-09-10 and
+                 later; faster command-line installation on Raspberry Pi
+                 (nulib2 and unar binaries are downloaded rather than compiled)
+
+1.1.3: Jan 2014: shares ADTPro disks folder as ADTDISKS; added environment
+                 variables for shared folders; can resolve by name
+                 "a2server.local" if network client has Bonjour/zeroconf;
+                 server presents itself as Shared computer to Macs on network;
+                 VM based on Debian 7
+
+1.1.4: Jan 2014: fixes bug with network boot if ADTPro disks folder is shared
+
+1.1.5: Jul 2014: a2server-setup fixes Raspbian 20-Jul-14 AppleTalk kernel panic
+
+1.2.0: Aug 2014: a2server-setup and Netatalk startup script addresses AppleTalk
+                 kernel panic on any Linux kernel 3.12-3.15; Netatalk starts
+                 in background, preventing startup delay; a2server-setup always
+                 configures Netatalk startup script and can download a new one
+                 if missing; a2server-setup on Raspbian or Debian 7 x86 is
+                 faster because it downloads binaries rather than compiling
+                 from source; unbit/unexec/usq unarchivers added; additional
+                 virtual machine which has both A2SERVER and A2CLOUD installed
+
+1.2.1: Jan 2015: minor fixes; support for LED blink on Raspbian 2015-01-31
+
+1.2.2: Mar 2015: installer improvements: now has command line options,
+                 including unattended install; installer sets passwords
+                 automatically to 'apple2'; status messages are now prefixed by
+                 A2SERVER:; can update Raspple II (Raspbian OS,
+                 NOOBS install manager, A2SERVER, and A2CLOUD); minor fixes.
+
+1.2.3: May 2015: changed Apple software links to Internet Archive
+
+1.2.4: Jul 2015: install option for ProTERM, Z.Link, ADTPro, Spectrum images
+
+1.2.5: Nov 2015: netboot install option for GS/OS 6.0.2/3; install HFS.FST
+                 during netboot install
+
+1.2.6: Nov 2015: full, ready to use install of Spectrum
+                 [unannounced; released briefly, then withdrawn]
+
+1.5.0: Jan 2016: mixed case filenames for A2FILES; remove GSFILES if empty; 
+                 install Marinetti 3.0b8 with internet access via MacIP;
+                 fully install Spectrum, SAFE2, SAM2, SNAP, MountIt; install
+                 DOS3.3 and TEACH; remove Ubuntu support; move/media/A2SHARED/*
+                 to /srv/A2SERVER; faster install (precompiled binaries) on
+                 64-bit Debian; cppo supports ShrinkIt, DOS 3.3, DSK, 2MG,mixed
+                 case filenames; nulib2 handles empty forks (thanks Andy);
+                 new installer options; patch P8 Thunderclock driver year table
+                 for current date; install from any host URL for development;
+                 source code at GitHub (thanks Joseph)
+
+1.5.1: Jan 2016: fixed GitHub URLs to prevent https errors during installation
+                 (thanks to http://blogs.yahoo.co.jp/ushi_cow/57459736.html);
+                 bug fixes and minor text changes
+                 
+1.5.1r2: Oct 2017: corrected version number
+                 
+1.5.2: Nov 2017: support for Debian/Raspbian Stretch; fixes minor bugs  during
+                 install; enable SSH server if disabled on Raspberry Pi; fixes
+                 changed download links for GS/OS communication software
+                 
+1.5.3a2: July 2020: initial support for Debian/Raspbian Buster
+
+1.5.5: April 2023:  support for Debian/Raspbain Bullseye;
+                    added GS/OS 6.0.4 install option;
+                    added netatalk 2.2.6 patches for modern distros;
+                    fixed dead URLs for various utilities;
+                    fixed cppo's creation of AppleDouble headers;
+                    fixed appletalk kernel module compilation to work with linux 5.x;
+                    updated Marinetti and link Layers to latest releases;
+                    updated Spectrum to latest release;
+                    added The Networker2 and Webber installation;
+
+Big thanks to: Anthony Martino, Henry Courbis, Joseph Carter, Jason King,
+Andy McFadden, Steven Hirsch, Geoff Body, Peter Wong, Tony Diaz, David Schmidt,
+David Schmenk, Ewen Wannop, Andrew Roughan, Antoine Vignau, Martin Haye,
+Ken Gagne, Peter Neubauer, James Littlejohn, Ninjaforce; the creators of
+Netatalk, The Unarchiver, ciopfs, macipgw; and the entire Apple II community.
+Redistribution of Spectrum, SAFE2, SAM2, SNAP by permission of Ewen Wannop.
+Thanks for using A2SERVER!
