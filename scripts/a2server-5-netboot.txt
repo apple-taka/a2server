@@ -10,11 +10,11 @@
 # Ensure URL we'll use ends in a /
 case "$A2SERVER_SCRIPT_URL" in
     */) scriptURL="$A2SERVER_SCRIPT_URL" ;;
-    *) scriptURL="${A2SERVER_SCRIPT_URL:-https://raw.githubusercontent.com/RasppleII/a2server/current}/" ;;
+    *) scriptURL="${A2SERVER_SCRIPT_URL:-https://raw.githubusercontent.com/apple_taka/a2server/main}/" ;;
 esac
 case "$A2SERVER_BINARY_URL" in
     */) binaryURL="$A2SERVER_BINARY_URL" ;;
-    *) binaryURL="${A2SERVER_BINARY_URL:-http://ivanx.com/a2server/files}/" ;;
+    *) binaryURL="${A2SERVER_BINARY_URL:-https://appleii.ivanx.com/a2server/files/a2server/files}/" ;;
 esac
 useExternalURL=1
 [[ $A2SERVER_NO_EXTERNAL ]] && useExternalURL=
@@ -903,7 +903,7 @@ if [[ ! $autoAnswerYes || -f /tmp/a2server-setupNetBoot ]]; then
                     mkdir -p /tmp/netboot/safe2
                     cd /tmp/netboot/safe2
                     if [[ $useExternalURL ]]; then
-                        [[ ! $safeUrl ]] && safeUrl="http://speccie.uk/speccie/downloads/safe230.bxy"
+                        [[ ! $safeUrl ]] && safeUrl="http://speccie.uk/speccie/downloads/safe236.bxy"
                         wget -qO safe2.bxy "$safeUrl"
                         cppo -s -ad safe2.bxy . &> /dev/null
                     fi
@@ -937,7 +937,7 @@ if [[ ! $autoAnswerYes || -f /tmp/a2server-setupNetBoot ]]; then
                     mkdir -p /tmp/netboot/sam2
                     cd /tmp/netboot/sam2
                     if [[ $useExternalURL ]]; then
-                        [[ ! $samUrl ]] && samUrl="http://speccie.uk/speccie/downloads/sam206.bxy"
+                        [[ ! $samUrl ]] && samUrl="http://speccie.uk/speccie/downloads/sam209.bxy"
                         wget -qO sam2.bxy "$samUrl"
                         cppo -s -ad sam2.bxy . &> /dev/null
                     fi
@@ -974,7 +974,7 @@ if [[ ! $autoAnswerYes || -f /tmp/a2server-setupNetBoot ]]; then
                     mkdir -p /tmp/netboot/snap
                     cd /tmp/netboot/snap
                     if [[ $useExternalURL ]]; then
-                        [[ ! $snapUrl ]] && snapUrl="http://speccie.uk/speccie/downloads/snap118.bxy"
+                        [[ ! $snapUrl ]] && snapUrl="http://speccie.uk/speccie/downloads/snap123.bxy"
                         wget -qO snap.bxy "$snapUrl"
                         cppo -s -ad snap.bxy . &> /dev/null
                     fi
@@ -1023,7 +1023,7 @@ if [[ ! $autoAnswerYes || -f /tmp/a2server-setupNetBoot ]]; then
                     cpAD Webber $commDir/Webber
                     cpAD Read.Me.First $commDir/Webber
                     cpAD Changes $commDir/Webber
-		    cpAD Tools/TOOL130 $gsosDir/System/Tools
+		            cpAD Tools/TOOL130 $gsosDir/System/Tools
                     cpAD Tools/TOOL132 $gsosDir/System/Tools
                     afpsync -v $gsosDir > /dev/null
                 fi
